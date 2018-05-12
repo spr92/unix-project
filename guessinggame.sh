@@ -5,15 +5,15 @@ function fileCount {
 
 # to read the user's guess
 function readGuess {
-	echo "How many files are in the current directory?"
         read input
-	echo input
+	echo $input
 }
 
-guess=-1 # set guess so it'll never be equal to number of files so it enters the loop
+guess=-1 # set guess so it'll never be equal to number of files so the program enters the loop
 
 while [[ guess -ne $(fileCount) ]]
 do
+	echo "How many files are in the current directory?" #asking user to enter the text
 	let guess=$(readGuess) # reads user's guess
 
 	#evaluates the guess and prompts a message accordingly
